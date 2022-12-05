@@ -12,5 +12,7 @@ namespace PROG_Systems
         public string name;
         public int cost;
         public int timeLeft;
+        public int addEntity;
+        public int subtractEntity;
     }
 }

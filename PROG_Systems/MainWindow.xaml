@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:PROG_Systems"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Loaded="Grid_Loaded">
-        <TextBlock x:Name="TextNotes" HorizontalAlignment="Left" Margin="72,204,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="163" Width="335"/>
-        <Button x:Name="ChangeTime" Content="Next Day" HorizontalAlignment="Left" Margin="679,29,0,0" VerticalAlignment="Top" Height="41" Width="77" Click="ChangeTime_Click"/>
-        <Button x:Name="HawkD" Content="Buy Hawk Decoy" HorizontalAlignment="Left" Margin="673,217,0,0" VerticalAlignment="Top" Height="38" Width="103" Click="HawkD_Click"/>
-        <TextBlock x:Name="Updates" HorizontalAlignment="Left" Margin="46,34,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="130"/>
+    <Grid Loaded="Grid_Loaded" Background="#FF18D9AB">
+        <TextBlock x:Name="TextNotes" HorizontalAlignment="Center" Margin="0,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="392" Width="336"/>
+        <Button x:Name="ChangeTime" Content="Next Day" HorizontalAlignment="Left" Margin="686,32,0,0" VerticalAlignment="Top" Height="41" Width="77" Click="ChangeTime_Click"/>
+        <Button x:Name="HawkD" Content="Buy Hawk Decoy" HorizontalAlignment="Left" Margin="660,180,0,0" VerticalAlignment="Top" Height="38" Width="103" Click="HawkD_Click"/>
+        <TextBlock x:Name="Updates" HorizontalAlignment="Left" Margin="55,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="78" Width="130"/>
+        <Button x:Name="AddB" Content="Release Bats" HorizontalAlignment="Left" Margin="660,223,0,0" VerticalAlignment="Top" Height="36" Width="103" Click="AddB_Click"/>
+        <Button x:Name="AddHH" Content="Add Hawk Hunter" HorizontalAlignment="Left" Margin="660,264,0,0" VerticalAlignment="Top" Height="34" Width="103" Click="AddHH_Click"/>
 
     </Grid>
 </Window>

@@ -10,7 +10,9 @@ namespace PROG_Systems
     {
         public List<Entity> entities = new List<Entity>();
 
-        public Item hawkDecoy = new Item() {name = "HawDe", cost = 5, timeLeft = 0 };
+        public Item hawkDecoy = new Item() {name = "HawDe", cost = 3, timeLeft = 0 };
+        public Item addHunter = new Item() { name = "Addhunter", cost = 5, subtractEntity = 1 };
+
 
         public int day = 1;
         public string GetAllEntityINFO()
@@ -18,7 +20,7 @@ namespace PROG_Systems
             string output = "";
             foreach (var item in entities)
             {
-                output += $"{item.Name} {item.Amount}\n";
+                output += $"\n{item.Name} {item.Amount}\n";
 
             }
 
@@ -30,9 +32,10 @@ namespace PROG_Systems
             day++;
             int numberofBats = EntityAmount("Bat");
             int numberofHawks = EntityAmount("Hawk");
-
+           
             Random random = new Random();
 
+            
 
             if(hawkDecoy.timeLeft < 1 && numberofHawks > 0 && numberofBats > 0)
             {
@@ -111,7 +114,7 @@ namespace PROG_Systems
             return 0;
         }
 
-        private void ChangeEntityAmount(string name, int amount)
+        public void ChangeEntityAmount(string name, int amount)
         {
             foreach (var item in entities)
             {

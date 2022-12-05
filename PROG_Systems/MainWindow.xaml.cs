@@ -23,6 +23,7 @@ namespace PROG_Systems
     {
         Enviroment enviroment = new Enviroment();
         Player player = new Player();
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -37,11 +38,14 @@ namespace PROG_Systems
         private void ChangeTime_Click(object sender, RoutedEventArgs e)
         {
             enviroment.TimePasses();
+            UpdateInfo();
+        }
+        private void UpdateInfo()
+        {
             TextNotes.Text = enviroment.day.ToString() + "\n";
             TextNotes.Text += enviroment.GetAllEntityINFO();
             Updates.Text = enviroment.hawkDecoy.timeLeft.ToString();
         }
-
         private void HawkD_Click(object sender, RoutedEventArgs e)
         {
             if (enviroment.hawkDecoy.timeLeft <= 0)
@@ -60,6 +64,37 @@ namespace PROG_Systems
             else
             {
                 Updates.Text = "You cannot have more than one deployed at a time";
+            }
+        }
+
+        private void AddB_Click(object sender, RoutedEventArgs e)
+        {
+            if (player.currency >= 3)
+            {
+                enviroment.ChangeEntityAmount("Bat", 3);
+                UpdateInfo();
+                player.currency -= 3;
+            }
+            else
+            {
+                Updates.Text = "Not enough money for that";
+            }
+            
+        }
+
+      
+
+        private void AddHH_Click(object sender, RoutedEventArgs e)
+        {
+            if (player.currency >= 5)
+            {
+                enviroment.ChangeEntityAmount("Hawk", -1);
+                UpdateInfo();
+                player.currency += 1;
+            }
+            else
+            {
+                Updates.Text = "Not enough money for that";
             }
         }
     }

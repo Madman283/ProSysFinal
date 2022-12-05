@@ -8,6 +8,6 @@ namespace PROG_Systems
 {
     internal class Player : Entity
     {
-        public int currency = 20;
+        public int currency = 35;
     }
 }
