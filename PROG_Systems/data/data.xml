@@ -1,0 +1,22 @@
+<environment type = "Cave" name = "Bracken Cave">
+    <entity type="Producer" name="Corn" species = "Zea mays saccharata" amount = "10000">
+    </entity>
+    <entity type="Producer" name="Cotton" species = "Gossypium hirsutum" amount = "10000">
+    </entity>
+    <entity type="Consumer" name="Corn earworm" species = "Helicoverpa zea" amount = "4000">
+    </entity>
+    <entity type="Consumer" name="Cotton Bollworm" species = "Helicoverpa zea" amount = "4000">
+    </entity>
+    <entity type="Consumer" name="Bat" species = "Tadarida brasiliensis" amount = "20">
+    </entity>
+    <entity type="Consumer" name="Hawk" species = "Buteo jamaicensis" amount = "1">
+    </entity>
+    <entity type="Decomposer" name="Dermestid beetle" species = "Dermestes carnivora" amount = "2">
+    </entity>
+    <entity type="Decomposer" name="Guano Beetle" species = "Jacobsoniidae" amount = "2">
+    </entity>
+    <entity type="Player" name="Anonymous Player" species = "Human" amount = "1">
+    </entity>
+    <entity type="Vendor" name="Unknown" species = "Human" amount = "1">
+    </entity>
+</environment>

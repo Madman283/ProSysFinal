@@ -1,0 +1,16 @@
+﻿<Window x:Class="PROG_Systems.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG_Systems"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <TextBlock x:Name="TextNotes" HorizontalAlignment="Left" Margin="72,204,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="163" Width="335"/>
+        <Button x:Name="ChangeTime" Content="Next Day" HorizontalAlignment="Left" Margin="679,29,0,0" VerticalAlignment="Top" Height="41" Width="77" Click="ChangeTime_Click"/>
+        <Button x:Name="HawkD" Content="Buy Hawk Decoy" HorizontalAlignment="Left" Margin="673,217,0,0" VerticalAlignment="Top" Height="38" Width="103" Click="HawkD_Click"/>
+        <TextBlock x:Name="Updates" HorizontalAlignment="Left" Margin="46,34,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="130"/>
+
+    </Grid>
+</Window>
