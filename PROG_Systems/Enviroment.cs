@@ -35,9 +35,13 @@ namespace PROG_Systems
            
             Random random = new Random();
 
-            
+            if (random.Next(1, 10) == 4)
+            {
+                //add hawk
+                ChangeEntityAmount("Hawk", 1);
+            }
 
-            if(hawkDecoy.timeLeft < 1 && numberofHawks > 0 && numberofBats > 0)
+            if (hawkDecoy.timeLeft < 1 && numberofHawks > 0 && numberofBats > 0)
             {
                 if (random.Next(1, 10) == 4)
                 {
