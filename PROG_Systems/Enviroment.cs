@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * PROG_Systems
+ * Brandon Figueroa, 12/11/2022
+ * Credits
+ * - Jenell Baxter tutoring sessions.
+ */
+
+
 namespace PROG_Systems
 {
     internal class Enviroment
@@ -32,8 +40,16 @@ namespace PROG_Systems
             day++;
             int numberofBats = EntityAmount("Bat");
             int numberofHawks = EntityAmount("Hawk");
-           
+
+            int numberofBeetles = EntityAmount("Dermestid beetle") + EntityAmount("Guano Beetle");
+
             Random random = new Random();
+
+            if (random.Next(1, 10) == 4)
+            {
+                //add Bat
+                ChangeEntityAmount("Bat", 1);
+            }
 
             if (random.Next(1, 10) == 4)
             {
@@ -95,7 +111,7 @@ namespace PROG_Systems
             }
 
             //determine bug population growth
-            int newBugs = (numberofBugs / 2) * (random.Next(50, 100) / 30);
+            int newBugs = (numberofBugs / 2) * (random.Next(30, 90) / 30);
             ChangeEntityAmount("Corn earworm", newBugs / 2);
             ChangeEntityAmount("Cotton Bollworm", newBugs / 2);
             
@@ -106,7 +122,7 @@ namespace PROG_Systems
 
         }
         //(number of total worms /2) * random number(500, 3000) /30
-        private int EntityAmount(string name)
+        public int EntityAmount(string name)
         {
             foreach (var item in entities)
             {

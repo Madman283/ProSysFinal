@@ -45,6 +45,7 @@ namespace PROG_Systems
             TextNotes.Text = enviroment.day.ToString() + "\n";
             TextNotes.Text += enviroment.GetAllEntityINFO();
             Updates.Text = enviroment.hawkDecoy.timeLeft.ToString();
+            
         }
         private void HawkD_Click(object sender, RoutedEventArgs e)
         {
@@ -65,6 +66,8 @@ namespace PROG_Systems
             {
                 Updates.Text = "You cannot have more than one deployed at a time";
             }
+
+            UpdateCurrency();
         }
 
         private void AddB_Click(object sender, RoutedEventArgs e)
@@ -79,13 +82,15 @@ namespace PROG_Systems
             {
                 Updates.Text = "Not enough money for that";
             }
-            
+            UpdateCurrency();
+
         }
 
       
 
         private void AddHH_Click(object sender, RoutedEventArgs e)
         {
+            
             if (player.currency >= 5)
             {
                 enviroment.ChangeEntityAmount("Hawk", -1);
@@ -96,6 +101,31 @@ namespace PROG_Systems
             {
                 Updates.Text = "Not enough money for that";
             }
+
+
+
+
+            //Updates currency but adds to it for some reason.
+            //if (enviroment.EntityAmount("Hawk") <= 0)
+            //{
+            //    Updates.Text = "There are not Hawks at this time.";
+            //}
+            //else
+            //{
+            //    UpdateCurrency();
+            //}
+
+            //UpdateCurrency();
+
+
+
+
         }
+
+        private void UpdateCurrency()
+        {
+            Updates.Text = player.currency.ToString($"You have ${player.currency} left to spend");
+        }
+
     }
 }

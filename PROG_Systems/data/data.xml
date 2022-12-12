@@ -15,8 +15,4 @@
     </entity>
     <entity type="Decomposer" name="Guano Beetle" species = "Jacobsoniidae" amount = "2">
     </entity>
-    <entity type="Player" name="Anonymous Player" species = "Human" amount = "1">
-    </entity>
-    <entity type="Vendor" name="Unknown" species = "Human" amount = "1">
-    </entity>
 </environment>
