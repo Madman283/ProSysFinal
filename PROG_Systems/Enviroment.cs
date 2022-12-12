@@ -50,6 +50,7 @@ namespace PROG_Systems
                 //add Bat
                 ChangeEntityAmount("Bat", 1);
             }
+          
 
             if (random.Next(1, 10) == 4)
             {
@@ -73,6 +74,12 @@ namespace PROG_Systems
 
             int numberofBugs = EntityAmount("Corn earworm") + EntityAmount("Cotton Bollworm");
             numberofBats = EntityAmount("Bat");
+
+            if (numberofBugs >= 100000)
+            {
+                ChangeEntityAmount("Corn earworm", -50000);
+                ChangeEntityAmount("Cotton Bollworm", -50000);
+            }
 
             int bugsNeeded = numberofBats * random.Next(500, 1000);
             int halfBugsNeeded = bugsNeeded / 2;
